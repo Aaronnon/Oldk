@@ -1,0 +1,201 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../images/fries.jpg);
+    background-size: cover;
+  }
+  body {
+    min-height: 1000px;
+  }
+  
+  .banner .shadow-box {
+    background-color: rgba(0, 0, 0, 0.5);
+  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .banner .content {
+    z-index: 1;
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  .banner .content h2 {
+    font-size: 5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.4em;
+  }
+  
+  .banner .content p {
+    font-size: 1em;
+    line-height: 24px;
+    color: #fff;
+  }
+  
+  .btn {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    letter-spacing: 6px;
+  }
+  .navbar {
+    position: fixed;
+    background: transparent;
+    padding: 10px 100px 10px 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+  }
+  
+  .navbar.active {
+    background: #111;
+  }
+  
+  header .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+  }
+  
+  header .logo span {
+    color: #ff0157;
+  }
+  
+  header .navigation {
+    position: relative;
+    display: flex;
+    margin-right: 200px;
+  }
+  
+  header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+  }
+  
+  header .navigation li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 5 00;
+  }
+  
+  header .navigation li a.active {
+    color: #ff0157;
+  }
+  
+  header .navigation li a:hover {
+    transition: 0.5s;
+    color: #ff0157;
+  }
+  
+  @media (max-width: 991px) {
+    header .navigation {
+      display: none;
+    }
+  
+    header .navigation.active {
+      transition: fadeIn 5s;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #fff;
+    }
+    @keyframes fadeIn {
+      from {
+        height: 0;
+      }
+      to {
+        height: 100%;
+      }
+    }
+    header .navigation li {
+      margin-left: 0;
+    }
+  
+    header .navigation li a {
+      line-height: 40px;
+      color: #111;
+      font-size: 1.6em;
+    }
+    .menuToggle {
+      position: relative;
+      z-index: 3;
+      margin-right: 100px;
+      width: 40px;
+      height: 40px;
+      background: url(../../images/toggle.png);
+      background-size: 30px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      background-position: center;
+    }
+  
+    .menuToggle.active {
+      z-index: 3;
+      background: url(../../images/close.jpg);
+      background-size: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    .about {
+      margin: 20px;
+    }
+    .about .row {
+      flex-direction: column;
+    }
+    .about .row .co150 {
+      width: 100%;
+    }
+    .about .row {
+      padding: 50px 0 10px 0 !important;
+    }
+  
+    .about .imgBx {
+      height: 50% !important;
+      margin-top: 40px !important;
+    }
+    .about .imgBx img {
+      object-fit: contain !important;
+    }
+  
+    .img-join {
+      min-width:500px !important ;
+  
+    }
+    .join {
+      flex-direction: column-reverse;
+    }
+  }
+  
