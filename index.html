@@ -6,37 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./index.css" />
-    <title>Old K</title>
+    <!-- <script src="./index.js"></script> -->
+
+    <title>Old K Chicken Burger</title>
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <div class="nav-bar">
+      <section id="header">
+        <nav class="nav-bar">
           <div class="logo-container">LOGO</div>
-          <div class="menu-list-container">
-            <div class="menu-item">Home</div>
-            <div class="menu-item">About</div>
-            <div class="menu-item">Menu</div>
-            <div class="menu-item">Location</div>
-            <div class="menu-item">Order Now</div>
-          </div>
-        </div>
-        <div class="slider-container">
+          <ul class="menu-list-container">
+            <li><a class="active" href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#top-menu">Menu</a></li>
+            <li><a href="#location">Location</a></li>
+            <li>
+              <a href="#">Order Now</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- <div class="slider-container">
           <img
             src="https://api.mrsdigi.com/files/658db533-4b3d-476a-9783-e859e7ab52b8/system/cover.jpg"
             alt="slider-1"
           />
-        </div>
-      </div>
-      <div class="about">
-        <div>ABOUT</div>
-      </div>
-      <div class="top-menu">
-        <div>TOP-MENU</div>
-      </div>
-      <div class="location">
-        <div>LOCATION</div>
-      </div>
+        </div> -->
+        <h2 class="test">HOME</h2>
+      </section>
+      <section id="about">
+        <!-- <img class="about-img" src="./images/trans.png" alt="icon" /> -->
+        <h2 class="test">About Us</h2>
+      </section>
+      <section id="top-menu">
+        <h2 class="top-menu-title">TOP-MENU</h2>
+        <div class="top-burger">burger</div>
+        <div class="button-link">link</div>
+      </section>
+      <section id="location">
+        <h2 class="test">LOCATION</h2>
+      </section>
     </div>
+    <script>
+      let section = document.querySelectorAll('section');
+      let navLinks = document.querySelectorAll(
+        '.nav-bar .menu-list-container li a'
+      );
+
+      window.onscroll = () => {
+        section.forEach((sec) => {
+          let top = window.scrollY +40;
+          let offset = sec.offsetTop;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute('id');
+
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach((links) => {
+              links.classList.remove('active');
+              document
+                .querySelector(
+                  '.nav-bar .menu-list-container li a[href*=' + id + ']'
+                )
+                .classList.add('active');
+            });
+          }
+        });
+      };
+    </script>
   </body>
 </html>
