@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./index.css" />
     <!-- <script src="./index.js"></script> -->
 
-    <title>Old K Chicken Burger</title>
+    <title>Old K Fried Chicken</title>
   </head>
   <body>
     <div class="container">
@@ -48,81 +48,95 @@
               />
               <div class="combo-info">
                 <h3 class="combo-name">Box combo 1</h3>
-                <div class="line">1</div>
-                <div>
-                  <p>Classic Nashvile Chicken Burger</p>
+
+                <div class="burger-info">
+                  <p>1 Classic Nashvile Chicken Burger</p>
                   <p>1 Karaage Tender W/Hot Fries</p>
                 </div>
-                <div>
-                  <div>
-                    <p>Hot Level:</p>
-                    <img src="" alt="" />
+                <div class="price-info">
+                  <div class="price-container">
+                    <div class="spicy-info">Hot Level:</div>
+                    <img
+                      class="spicy-pic"
+                      src="./images/spicy.svg"
+                      alt="spicy"
+                    />
+                    <img
+                      class="spicy-pic"
+                      src="./images/spicy.svg"
+                      alt="spicy"
+                    />
                   </div>
-                  <div>$16</div>
+                  <div class="price">$16</div>
                 </div>
-                <div class="line"></div>
               </div>
             </div>
-
           </div>
 
           <div class="top-burger">
             <div class="burger-container">
               <img
-                src="./images/top-burger-images/nashville.svg"
+                src="./images/top-burger-images/orlean.svg"
                 alt="nashville"
               />
               <div class="combo-info">
-                <h3 class="combo-name">Box combo 1</h3>
-                <div class="line"></div>
-                <div>
-                  <p>Classic Nashvile Chicken Burger</p>
-                  <p>1 Karaage Tender W/Hot Fries</p>
+                <h3 class="combo-name">Box combo 2</h3>
+
+                <div class="burger-info">
+                  <p>1 Signature Orleans Chicken Burger</p>
+                  <p>1 Karrage Tender W/Hot Fries</p>
                 </div>
-                <div>
-                  <div>
-                    <p>Hot Level:</p>
-                    <img src="" alt="" />
+                <div class="price-info">
+                  <div class="price-container">
+                    <div class="spicy-info">Hot Level:</div>
+                    <img
+                      class="spicy-pic"
+                      src="./images/spicy.svg"
+                      alt="spicy"
+                    />
                   </div>
-                  <div>$16</div>
+                  <div class="price">$16</div>
                 </div>
-                <div class="line"></div>
               </div>
             </div>
-
           </div>
           <div class="top-burger">
             <div class="burger-container">
               <img
-                src="./images/top-burger-images/nashville.svg"
+                src="./images/top-burger-images/combo-3.svg"
                 alt="nashville"
               />
               <div class="combo-info">
-                <h3 class="combo-name">Box combo 1</h3>
-                <div class="line"></div>
-                <div>
-                  <p>Classic Nashvile Chicken Burger</p>
-                  <p>1 Karaage Tender W/Hot Fries</p>
+                <h3 class="combo-name">Box combo 3</h3>
+
+                <div class="burger-info">
+                  <p>Any 2 Chicken Burgers</p>
+                  <p>W/Hot Fries</p>
                 </div>
-                <div>
-                  <div>
-                    <p>Hot Level:</p>
-                    <img src="" alt="" />
+                <div class="price-info">
+                  <div class="price-container">
+                    <!-- <div class="spicy-info">Hot Level:</div>
+                    <img class="spicy-pic" src="./images/spicy.svg" alt="spicy" />
+                    <img class="spicy-pic" src="./images/spicy.svg" alt="spicy" /> -->
                   </div>
-                  <div>$16</div>
+                  <div class="price">$20</div>
                 </div>
-                <div class="line"></div>
               </div>
             </div>
-
           </div>
-
         </div>
-        <!-- <div class="button-link">link</div> -->
+        <div class="view-more-button">View More</div>
       </section>
       <section id="location">
-        <h2 class="test">LOCATION</h2>
+        <div class="test">
+          <div id="map"></div>
+        </div>
       </section>
+      <footer class="footer-container">
+        <div class="footer-text">
+          © 2022 Old K Chicken Burger Canada. All rights reserved.
+        </div>
+      </footer>
     </div>
     <script>
       let section = document.querySelectorAll('section');
@@ -149,6 +163,28 @@
           }
         });
       };
+
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 43.76588, lng: -79.40073 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+
+      window.initMap = initMap;
     </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACUS-hS1jiATF9i7ErOzzsJvHHbA0y9bU&callback=initMap&v=weekly"
+      defer
+    ></script>
   </body>
 </html>
