@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumar+One&family=Libre+Caslon+Text&display=swap&family=Kulim+Park&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&family=Libre+Caslon+Text&display=swap&family=Kulim+Park&display=swap&family=Big+Shoulders+Stencil+Display:wght@800');
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
     margin: 0;
@@ -96,9 +96,9 @@ html {
 }
 
 .logo-container {
-
-    font-size: 28px;
-    font-weight: bold;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 48px;
+    /* font-weight: bold; */
 }
 
 .menu-list-container {
