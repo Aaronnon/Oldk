@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./swiper-bundle.min.css" />
 
     <title>Old K Fried Chicken</title>
   </head>
@@ -14,23 +15,45 @@
       <section id="header">
         <nav class="nav-bar">
           <div class="logo-container">LOGO</div>
+          <div class="hambuger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
           <ul class="menu-list-container">
             <li><a class="active" href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#top-menu">Menu</a></li>
             <li><a href="#location">Location</a></li>
             <li>
-              <a href="https://order.mrsdigi.com/441510191501000/85b92d28-35d5-51af-b316-63c42430a426#/store-home">Order Now</a>
+              <a
+                href="https://order.mrsdigi.com/441510191501000/85b92d28-35d5-51af-b316-63c42430a426#/store-home"
+                >Order Now</a
+              >
             </li>
           </ul>
         </nav>
-        <!-- <div class="slider-container">
-          <img
-            src="https://api.mrsdigi.com/files/658db533-4b3d-476a-9783-e859e7ab52b8/system/cover.jpg"
-            alt="slider-1"
-          />
-        </div> -->
-        <h2 class="test">HOME</h2>
+        <div class="swiper slider-container">
+          <div class="swiper-wrapper">
+            <img
+              class="swiper-slide"
+              src="./images/slider/banner-1.png"
+              alt="slider-1 oldk 老k炸鸡"
+            />
+            <img
+              class="swiper-slide"
+              src="./images/slider/banner-2.png"
+              alt="slider-2 oldk 老k炸鸡"
+            />
+            <img
+              class="swiper-slide"
+              src="./images/slider/banner-3.png"
+              alt="slider-3 oldk 老k炸鸡"
+            />
+          </div>
+          <div class="swiper-color swiper-pagination"></div>
+        </div>
+        <h2 class="test"></h2>
       </section>
       <section id="about">
         <!-- <img class="about-img" src="./images/trans.png" alt="icon" /> -->
@@ -39,6 +62,7 @@
       <section id="top-menu">
         <h2 class="top-menu-title">Our Top Menu</h2>
         <div class="top-burger-container">
+
           <div class="top-burger">
             <div class="burger-container">
               <img
@@ -99,6 +123,7 @@
               </div>
             </div>
           </div>
+
           <div class="top-burger">
             <div class="burger-container">
               <img
@@ -113,13 +138,13 @@
                   <p>W/Hot Fries</p>
                 </div>
                 <div class="price-info">
-                  <div class="price-container">
-                  </div>
+                  <div class="price-container"></div>
                   <div class="price">$20</div>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
         <div class="view-more-button">View More</div>
       </section>
@@ -134,7 +159,45 @@
         </div>
       </footer>
     </div>
+    <script src="./swiper-bundle.min.js"></script>
+
     <script>
+      var mySwiper = new Swiper('.swiper', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+        autoplay: true,
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        autoplay: {
+          delay: 3000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+
+      var hambuger = document.querySelector('.hambuger');
+      let navBar = document.querySelector('.menu-list-container');
+      hambuger.onclick = function () {
+        // console.log(hambuger);
+
+        navBar.classList.toggle('activate');
+        // document.getElementsByClassName(".menu-list-container").style.height = "480";
+      };
+
       let section = document.querySelectorAll('section');
       let navLinks = document.querySelectorAll(
         '.nav-bar .menu-list-container li a'
@@ -155,6 +218,7 @@
                   '.nav-bar .menu-list-container li a[href*=' + id + ']'
                 )
                 .classList.add('active');
+                navBar.classList.remove('activate')
             });
           }
         });
