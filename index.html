@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./swiper-bundle.min.css" />
 
-    <title>Old K Fried Chicken --- 老K炸鸡</title>
+    <title>Old K Fried Chicken — 老K炸鸡</title>
 
     <script
       type="text/javascript"
@@ -41,7 +41,7 @@
     <div class="container">
       <section id="header">
         <nav class="nav-bar">
-          <div class="logo-container">OLD.K</div>
+          <div class="logo-container"><a href="/">OLD.K</a></div>
           <div class="hambuger">
             <div class="line"></div>
             <div class="line"></div>
@@ -50,13 +50,13 @@
           <ul class="menu-list-container">
             <li><a class="active" href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
-            
+
             <li><a href="#top-menu">Box Combo</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="/">Menu</a></li>
             <li>
               <a
-              target="_blank"
+                target="_blank"
                 href="https://order.mrsdigi.com/441510191501000/85b92d28-35d5-51af-b316-63c42430a426#/store-home"
                 >Order Now</a
               >
@@ -64,6 +64,7 @@
           </ul>
         </nav>
         <div class="swiper slider-container">
+          <div class="shadow-box"></div>
           <div class="swiper-wrapper">
             <img
               class="swiper-slide"
@@ -182,61 +183,97 @@
           </div>
         </div>
       </section>
-      <section id="location">
-        <div class="map-info">
-          <div class="location-container"></div>
-          <div class="map-bg"></div>
+      <section id="contact-us">
+        <div class="two-conainer">
+          <!-- <div class="one">1</div>
+          <div class="two">2</div> -->
+          <div class="location-info">
+            <div class="contact">
+              <form>
+                <h3>CONTACT US</h3>
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  id="email_id"
+                  placeholder="Email Address"
+                  required
+                />
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="Phone Number"
+                  required
+                />
+                <textarea
+                  required
+                  id="message"
+                  placeholder="How can we help you?"
+                  rows="4"
+                  cols="4"
+                ></textarea>
+                <button onclick="sendMail()">Submit</button>
+              </form>
+            </div>
+          </div>
+
           <div id="map"></div>
         </div>
-        <div class="location-info">
-          <div class="contact">
-            <form>
-              <h3>CONTACT US</h3>
-              <input
-                type="text"
-                id="fullName"
-                placeholder="Your Name"
-                required
-              />
-              <input
-                type="email"
-                id="email_id"
-                placeholder="Email Address"
-                required
-              />
-              <input
-                type="text"
-                id="phone"
-                placeholder="Phone Number"
-                required
-              />
-              <textarea
-                required
-                id="message"
-                placeholder="How can we help you?"
-                rows="4"
-                cols="4"
-              ></textarea>
-              <button onclick="sendMail()">Submit</button>
-            </form>
-          </div>
-          <div class="location-info2">
-            <div class="location-address">
-            
-              <a target="_blank" href="https://www.google.com/maps/dir//old+k/@43.7657683,-79.4009868,16.5z/data=!3m1!5s0x882b2d42e78e7153:0xaaa0c553df8006d0!4m8!4m7!1m0!1m5!1m1!1s0x882b2d9b8f70cc0b:0x4128a5d979b70b68!2m2!1d-79.4006999!2d43.7659152" class="address-info"><span>LOCATION<span/><br/><br/>142 Willowdale Ave</br> 
-                North York,ON </br> 
-                M2N 4Y4</a>
-            </div>
-            <div class="platform">
-              <p class="order-info">ORDER FROM:</p>
-              <div class="logo-container-order" >
-                <img class="logo-img" src="./images//uber.png" alt="uber">
-                <img class="logo-img" src="./images//fantuan.webp" alt="fantuan">
-                <img class="logo-img" src="./images//fhway.webp" alt="fhway">
-                <img class="logo-img" src="./images//panda.webp" alt="panda">
-              </div>
-            </div>
 
+        <div class="location-info2">
+          <div class="location-address">
+            <img
+              class="logo-img-dic"
+              src="./images/location.svg"
+              alt="location-logo"
+            />
+            <p>LOCATION:</p>
+            <a
+              target="_blank"
+              href="https://www.google.com/maps/place/142+Willowdale+Ave,+North+York,+ON+M2N+4Y4/@43.7658755,-79.4007107,17z/data=!3m1!4b1!4m6!3m5!1s0x882b2d42e7f177c3:0x2a5de77c5fc215ba!8m2!3d43.7658755!4d-79.4007107!16s%2Fg%2F11b8v51315"
+              ><p class="p-info">142 Willowdale Ave North York,ON M2N 4Y4</p></a
+            >
+          </div>
+          <div class="location-address">
+            <img
+              class="logo-img-dic"
+              src="./images/burger (2).svg"
+              alt="location-logo"
+            />
+            <p>ORDER FROM:</p>
+            <div class="logo-container-order">
+              <img class="logo-img" src="./images//uber.png" alt="uber" />
+              <img
+                class="logo-img"
+                src="./images//fantuan.webp"
+                alt="fantuan"
+              />
+              <img class="logo-img" src="./images//fhway.webp" alt="fhway" />
+              <img class="logo-img" src="./images//panda.webp" alt="panda" />
+            </div>
+          </div>
+          <div class="location-address">
+            <img
+              class="logo-img-dic"
+              src="./images/phone.svg"
+              alt="location-logo"
+            />
+            <p>PHONE NUMBER:</p>
+            <a href="tel:4162292777"><p>(416) 229-2777</p></a>
+          </div>
+          <div class="location-address">
+            <img
+              class="logo-img-dic"
+              src="./images/mail.svg"
+              alt="location-logo"
+            />
+            <p>EMAIL:</p>
+            <a href="mailto:support@oldk.ca"><p>support@oldk.ca</p></a>
+          </div>
           <div></div>
         </div>
       </section>
