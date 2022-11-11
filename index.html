@@ -8,7 +8,34 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./swiper-bundle.min.css" />
 
-    <title>Old K Fried Chicken</title>
+    <title>Old K Fried Chicken --- 老K炸鸡</title>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('Zs3yv1ZZultkLuwn1');
+      })();
+    </script>
+
+    <script>
+      function sendMail() {
+        var params = {
+          from_name: document.getElementById('fullName').value,
+          email_id: document.getElementById('email_id').value,
+          phone: document.getElementById('phone').value,
+          message: document.getElementById('message').value,
+        };
+        emailjs
+          .send('service_j54g2r1', 'template_lr7m5mp', params)
+          .them(function (res) {
+            alert('Success!' + res.status);
+          });
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -23,10 +50,13 @@
           <ul class="menu-list-container">
             <li><a class="active" href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#top-menu">Menu</a></li>
+            
+            <li><a href="#top-menu">Box Combo</a></li>
             <li><a href="#location">Location</a></li>
+            <li><a href="#menu">Menu</a></li>
             <li>
               <a
+              target="_blank"
                 href="https://order.mrsdigi.com/441510191501000/85b92d28-35d5-51af-b316-63c42430a426#/store-home"
                 >Order Now</a
               >
@@ -62,7 +92,6 @@
       <section id="top-menu">
         <h2 class="top-menu-title">Our Top Menu</h2>
         <div class="top-burger-container">
-
           <div class="top-burger">
             <div class="burger-container">
               <img
@@ -78,19 +107,22 @@
                 </div>
                 <div class="price-info">
                   <div class="price-container">
-                    <div class="spicy-info">Hot Level:</div>
-                    <img
-                      class="spicy-pic"
-                      src="./images/spicy.svg"
-                      alt="spicy"
-                    />
-                    <img
-                      class="spicy-pic"
-                      src="./images/spicy.svg"
-                      alt="spicy"
-                    />
+                    <div class="spicy-info">
+                      Hot Level:
+                      <img
+                        class="spicy-pic"
+                        src="./images/spicy.svg"
+                        alt="spicy"
+                      />
+                      <img
+                        class="spicy-pic"
+                        src="./images/spicy.svg"
+                        alt="spicy"
+                      />
+                    </div>
                   </div>
                   <div class="price">$16</div>
+                  <div class="view-more-button">View More</div>
                 </div>
               </div>
             </div>
@@ -111,14 +143,17 @@
                 </div>
                 <div class="price-info">
                   <div class="price-container">
-                    <div class="spicy-info">Hot Level:</div>
-                    <img
-                      class="spicy-pic"
-                      src="./images/spicy.svg"
-                      alt="spicy"
-                    />
+                    <div class="spicy-info">
+                      Hot Level:
+                      <img
+                        class="spicy-pic"
+                        src="./images/spicy.svg"
+                        alt="spicy"
+                      />
+                    </div>
                   </div>
                   <div class="price">$16</div>
+                  <div class="view-more-button">View More</div>
                 </div>
               </div>
             </div>
@@ -138,19 +173,71 @@
                   <p>W/Hot Fries</p>
                 </div>
                 <div class="price-info">
-                  <div class="price-container"></div>
+                  <div class="price-container"><br /><br /></div>
                   <div class="price">$20</div>
+                  <div class="view-more-button">View More</div>
                 </div>
               </div>
             </div>
           </div>
-          
         </div>
-        <div class="view-more-button">View More</div>
       </section>
       <section id="location">
-        <div class="test">
+        <div class="map-info">
+          <div class="location-container"></div>
+          <div class="map-bg"></div>
           <div id="map"></div>
+        </div>
+        <div class="location-info">
+          <div class="contact">
+            <form>
+              <h3>CONTACT US</h3>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                id="email_id"
+                placeholder="Email Address"
+                required
+              />
+              <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number"
+                required
+              />
+              <textarea
+                required
+                id="message"
+                placeholder="How can we help you?"
+                rows="4"
+                cols="4"
+              ></textarea>
+              <button onclick="sendMail()">Submit</button>
+            </form>
+          </div>
+          <div class="location-info2">
+            <div class="location-address">
+            
+              <a target="_blank" href="https://www.google.com/maps/dir//old+k/@43.7657683,-79.4009868,16.5z/data=!3m1!5s0x882b2d42e78e7153:0xaaa0c553df8006d0!4m8!4m7!1m0!1m5!1m1!1s0x882b2d9b8f70cc0b:0x4128a5d979b70b68!2m2!1d-79.4006999!2d43.7659152" class="address-info"><span>LOCATION<span/><br/><br/>142 Willowdale Ave</br> 
+                North York,ON </br> 
+                M2N 4Y4</a>
+            </div>
+            <div class="platform">
+              <p class="order-info">ORDER FROM:</p>
+              <div class="logo-container-order" >
+                <img class="logo-img" src="./images//uber.png" alt="uber">
+                <img class="logo-img" src="./images//fantuan.webp" alt="fantuan">
+                <img class="logo-img" src="./images//fhway.webp" alt="fhway">
+                <img class="logo-img" src="./images//panda.webp" alt="panda">
+              </div>
+            </div>
+
+          <div></div>
         </div>
       </section>
       <footer class="footer-container">
@@ -159,6 +246,7 @@
         </div>
       </footer>
     </div>
+
     <script src="./swiper-bundle.min.js"></script>
 
     <script>
@@ -218,7 +306,7 @@
                   '.nav-bar .menu-list-container li a[href*=' + id + ']'
                 )
                 .classList.add('active');
-                navBar.classList.remove('activate')
+              navBar.classList.remove('activate');
             });
           }
         });
