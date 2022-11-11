@@ -175,7 +175,7 @@ html {
 }
 
 #about {
-    margin-top: -1px;
+  
     position: relative;
     height: 100vh;
     width: 100%;
@@ -207,7 +207,7 @@ html {
 } */
 
 #top-menu {
-    margin-top: -1px;
+ 
     display: flex;
     flex-direction: column;
     position: relative;
@@ -389,7 +389,7 @@ html {
 }
 
 #location {
-    margin-top: -1px;
+  
     position: relative;
     display: flex;
     flex-direction: row;
