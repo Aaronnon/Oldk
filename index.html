@@ -29,11 +29,15 @@
           phone: document.getElementById('phone').value,
           message: document.getElementById('message').value,
         };
-        emailjs
-          .send('service_j54g2r1', 'template_lr7m5mp', params)
-          .them(function (res) {
-            alert('Success!' + res.status);
-          });
+        if ((from_name == false) & (email_id == false)) {
+          alert('Please enter a name or valid email');
+        } else {
+          emailjs
+            .send('service_j54g2r1', 'template_lr7m5mp', params)
+            .them(function (res) {
+              alert('Success!' + res.status);
+            });
+        }
       }
     </script>
   </head>
