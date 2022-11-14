@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+
+    <title>Menu — Old K Fried Chicken — 老K炸鸡</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav-bar">
+        <div class="logo-container"><a href="/">OLD.K</a></div>
+        <div class="hambuger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="menu-list-container">
+          <li><a href="/index.html">Home</a></li>
+          <li><a class="active" href="./pages/menu.html">Menu</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="https://order.mrsdigi.com/441510191501000/85b92d28-35d5-51af-b316-63c42430a426#/store-home"
+              >Order Now</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-container">
+        <div>
+          <p class="menu-title">Menu</p>
+          <p>Fresh from the fryer to you</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var hambuger = document.querySelector('.hambuger');
+    let navBar = document.querySelector('.menu-list-container');
+    hambuger.onclick = function () {
+      // console.log(hambuger);
+
+      navBar.classList.toggle('activate');
+      // document.getElementsByClassName(".menu-list-container").style.height = "480";
+    };
+
+    let section = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll(
+      '.nav-bar .menu-list-container li a'
+    );
+
+    window.onscroll = () => {
+      section.forEach((sec) => {
+        let top = window.scrollY + 40;
+        let offset = sec.offsetTop;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach((links) => {
+            links.classList.remove('active');
+            document
+              .querySelector(
+                '.nav-bar .menu-list-container li a[href*=' + id + ']'
+              )
+              .classList.add('active');
+            navBar.classList.remove('activate');
+          });
+        }
+      });
+    };
+  </script>
+</html>
