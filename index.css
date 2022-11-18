@@ -83,7 +83,7 @@ html {
 
 .shadow-box {
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    /* z-index: 2; */
 
     width: 100%;
     height: 100%;
@@ -91,6 +91,17 @@ html {
     top: 0;
     left: 0;
 }
+
+
+/* .swiper-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+ z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
 
 .nav-bar {
     font-family: 'Libre Caslon Text', serif;
@@ -171,16 +182,24 @@ html {
 }
 
 .slider-container {
+    /* background-color: rgba(0, 0, 0, 0.5); */
     position: relative;
     height: 100vh;
     padding-top: 76px;
 }
 
-.slider-container img {
+.slider-img-container{
+    height: 100%;
+    width: 100vw;
+    /* object-fit: cover; */
+}
+
+/* .slider-container img {
+
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
+} */
 
 
 
@@ -428,7 +447,7 @@ html {
     width: 100vw;
     flex-wrap: wrap;
     justify-content: center;
-    
+
     /* position: relative; */
     /* min-width: 1200px; */
     /* background-color: #D9D9D9; */
@@ -477,10 +496,10 @@ html {
 
 .location-address {
     padding-top: 20px;
-    margin:0 auto;
+    margin: 0 auto;
     font-family: 'Libre Caslon Text', serif;
     justify-content: center;
-       /* justify-content: space-around; */
+    /* justify-content: space-around; */
     color: #fff;
     /* background-color: aqua; */
     height: 200px;
@@ -541,11 +560,11 @@ html {
     background-color: #B44C4C;
 } */
 
-form , #map {
+form, #map {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     background-color: #fff;
     display: flex;
-    margin:20px 20px;
+    margin: 20px 20px;
     flex-direction: column;
     padding: 2vw 4vw;
     width: 25rem;
@@ -640,6 +659,7 @@ form button {
     .burger-container img {
         width: 80%;
     }
+
     /* #map{
         margin-top: 5%;
     } */
@@ -680,7 +700,7 @@ form button {
         top: 8%;
     }
 
-    #contact-us{
+    #contact-us {
         padding-top: 3%;
     }
 
@@ -845,16 +865,18 @@ form button {
 
     } */
 }
+
 @media only screen and (max-width: 770px) {
     form {
-   
+
         width: 30rem;
 
     }
-    #map{
+
+    #map {
         width: 30rem;
     }
-    
+
 
 }
 
@@ -945,16 +967,17 @@ form button {
         /* top: %; */
         /* bottom: 40%; */
     }
-    #contact-us{
+
+    #contact-us {
         padding-top: 5%;
     }
 }
 
 
 @media only screen and (max-width: 550px) {
-form{
-    width: 400px;
-}
+    form {
+        width: 400px;
+    }
 
 }
 
@@ -970,19 +993,20 @@ form{
 }
 
 @media only screen and (max-width: 450px) {
-    form{
+    form {
         width: 350px;
     }
 
-@media only screen and (max-width: 400px) {
-    form{
-        width: 280px;
+    @media only screen and (max-width: 400px) {
+        form {
+            width: 280px;
+        }
+
+        .burger-container img {
+            /* margin-bottom: 20px; */
+            width: 95%;
+            position: relative;
+            /* top: %; */
+            /* bottom: 40%; */
+        }
     }
-    .burger-container img {
-        /* margin-bottom: 20px; */
-        width: 95%;
-        position: relative;
-        /* top: %; */
-        /* bottom: 40%; */
-    }
-}
