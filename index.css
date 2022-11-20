@@ -83,25 +83,57 @@ html {
 
 .shadow-box {
     background-color: rgba(0, 0, 0, 0.5);
-    /* z-index: 2; */
-
+    z-index: 2;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+.slider-title {
+    display: flex;
+    /* background-color: #B44C4C; */
 
-/* .swiper-wrapper {
-    background-color: rgba(0, 0, 0, 0.5);
- z-index: 2;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
+    /* line-height: 100vh; */
+    /* text-align: center;
+    vertical-align: middle; */
+    /* align-items: center; */
+    justify-content: center;
+    /* z-index: 4; */
+    color: #f5f5f5;
+    /* font-size: larger; */
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 12rem;
+    letter-spacing: 1rem;
+}
+
+.slider-info {
+    letter-spacing: 0.4rem;
+    display: flex;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    align-items: center;
+    justify-content: center;
+    /* margin-top:00px; */
+    /* z-index: 4; */
+    text-align: center;
+    vertical-align: middle;
+    color: wheat;
+    font-size: 1.5rem;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+}
+
 
 .nav-bar {
     font-family: 'Libre Caslon Text', serif;
@@ -188,19 +220,48 @@ html {
     padding-top: 76px;
 }
 
-.slider-img-container{
+.slider-img-container {
     height: 100%;
     width: 100vw;
     /* object-fit: cover; */
 }
 
-/* .slider-container img {
+.slider-container img {
 
     height: 100%;
     width: 100%;
     object-fit: cover;
-} */
+}
 
+.swiper-video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn {
+    font-family: 'Libre Caslon Text', serif;
+    text-decoration: none !important;
+    font-size: 1em;
+    border-radius: 5px;
+    color: #fff;
+    background: #B44C4C;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: .5s;
+}
+
+.btn:hover {
+    letter-spacing: 6px;
+    font-weight: bold;
+}
 
 
 .test {
@@ -405,14 +466,16 @@ html {
 } */
 
 .view-more-button {
+    text-decoration: none !important;
     margin-top: 30px;
     /* position: absolute; */
-    width: 156px;
+    /* width: 156px; */
+    padding: 3px 35px;
     line-height: 40px;
     /* text-align: center; */
-    height: 40px;
+    /* height: 40px; */
     border: 1px solid #fff;
-
+    transition: .5s;
     /* bottom: 14%; */
     font-family: 'Libre Caslon Text', serif;
     font-weight: bold;
@@ -424,6 +487,9 @@ html {
 .view-more-button:hover {
     box-shadow: 2px 2px 8px #B44C4C;
     transition: all .3s ease-in-out;
+    letter-spacing: 6px;
+    font-weight: bold;
+
 }
 
 #contact-us {
@@ -997,16 +1063,27 @@ form button {
         width: 350px;
     }
 
-    @media only screen and (max-width: 400px) {
-        form {
-            width: 280px;
-        }
-
-        .burger-container img {
-            /* margin-bottom: 20px; */
-            width: 95%;
-            position: relative;
-            /* top: %; */
-            /* bottom: 40%; */
-        }
+    .slider-title {
+        font-weight: 2rem;
+        letter-spacing: normal;
     }
+}
+
+@media only screen and (max-width: 400px) {
+    form {
+        width: 280px;
+    }
+
+    .slider-title {
+        font-weight: 2rem;
+        letter-spacing: normal;
+    }
+
+    .burger-container img {
+        /* margin-bottom: 20px; */
+        width: 95%;
+        position: relative;
+        /* top: %; */
+        /* bottom: 40%; */
+    }
+}

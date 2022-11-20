@@ -70,30 +70,40 @@
         <div class="swiper slider-container">
           <!-- <div class="shadow-box"></div> -->
           <div class="swiper-wrapper">
-            <div class="shadow-box swiper-slide">
-              <img
-                src="./images/slider/slider-1.jpeg"
+            <div class="swiper-slide">
+              <div class="shadow-box">
+                <p class="slider-title">OLD.K</p>
+                <p class="slider-info">The Best Fried Chicken Sandwiches.</p>
+                <a href="https://order.mrsdigi.com/441510191501000/85b92d28-35d5-51af-b316-63c42430a426#/store-home" target="_blank" rel="noopener noreferrer" class="btn">Order now</a>
+              </div>
+              <video
+                autoplay
+                muted
+                loop
+                class="swiper-video"
+                src="./images/slider/video-1.mp4"
                 alt="slider-1 oldk 老k炸鸡"
               />
             </div>
 
-            <div class="shadow-box swiper-slide">
+            <div class="swiper-slide">
+              <div class="shadow-box"></div>
               <img
+                class="swiper-img"
                 src="./images/slider/slider-1.jpeg"
-                alt="slider-1 oldk 老k炸鸡"
+                alt="slider-2 oldk 老k炸鸡"
               />
             </div>
-<!-- 
-            <img
-              class="swiper-slide"
-              src="./images/slider/slider-4.jpeg"
-              alt="slider-2 oldk 老k炸鸡"
-            />
-            <img
-              class="swiper-slide"
-              src="./images/slider/slider-5.jpeg"
-              alt="slider-3 oldk 老k炸鸡"
-            /> -->
+
+            <div class="swiper-slide">
+              <div class="shadow-box"></div>
+
+              <img
+                class="swiper-img"
+                src="./images/slider/slider-5.jpeg"
+                alt="slider-3 oldk 老k炸鸡"
+              />
+            </div>
           </div>
 
           <div class="swiper-color swiper-pagination"></div>
@@ -137,7 +147,7 @@
                     </div>
                   </div>
                   <div class="price">$16</div>
-                  <div class="view-more-button">View More</div>
+                  <a href="./pages/menu.html" class="view-more-button">View More</a>
                 </div>
               </div>
             </div>
@@ -168,7 +178,7 @@
                     </div>
                   </div>
                   <div class="price">$16</div>
-                  <div class="view-more-button">View More</div>
+                  <a href="./pages/menu.html" class="view-more-button">View More</a>
                 </div>
               </div>
             </div>
@@ -190,7 +200,7 @@
                 <div class="price-info">
                   <div class="price-container"><br /><br /></div>
                   <div class="price">$20</div>
-                  <div class="view-more-button">View More</div>
+                  <a href="./pages/menu.html" class="view-more-button">View More</a>
                 </div>
               </div>
             </div>
@@ -304,17 +314,24 @@
       var mySwiper = new Swiper('.swiper', {
         direction: 'horizontal', // 垂直切换选项
         loop: true, // 循环模式选项
-        autoplay: true,
+        autoplay: false,
+        pauseOnMouseEnter: true,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+        // disableOnInteraction:false,
+
         // 如果需要分页器
         pagination: {
           el: '.swiper-pagination',
         },
 
-        autoplay: {
-          delay: 5000,
-          stopOnLastSlide: false,
-          disableOnInteraction: false,
-        },
+        // autoplay: {
+        //   autoplay:false,
+        //   delay: 5000,
+        //   pauseOnMouseEnter: true,
+        //   stopOnLastSlide: false,
+        //   disableOnInteraction: false,
+        // },
 
         // 如果需要前进后退按钮
         navigation: {
