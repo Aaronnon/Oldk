@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Comming Soon."
+    />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./swiper-bundle.min.css" />
+    <script defer src="./index.js"></script>
+
+    <title>OLD.K CHICKEN BURGERS</title>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('Zs3yv1ZZultkLuwn1');
+      })();
+    </script>
+
+    <script>
+      function sendMail() {
+        var params = {
+          from_name: document.getElementById('fullName').value,
+          email_id: document.getElementById('email_id').value,
+          phone: document.getElementById('phone').value,
+          message: document.getElementById('message').value,
+        };
+        if ((from_name == false) & (email_id == false)) {
+          alert('Please enter a name or valid email');
+        } else {
+          emailjs
+            .send('service_j54g2r1', 'template_lr7m5mp', params)
+            .them(function (res) {
+              alert('Success!' + res.status);
+            });
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <section id="header">
+        <nav class="nav-bar">
+          <div class="logo-container"><a href="/">OLD.K</a></div>
+          <div class="hambuger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <ul class="menu-list-container">
+            <li><a class="active" href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#top-menu">Box Combo</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="./pages/menu.html">Menu</a></li>
+            <li>
+              <a
+                target="_blank"
+                href="https://order.mrsdigi.com/441510191501000/85b92d28-35d5-51af-b316-63c42430a426#/store-home"
+                >Order Now</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="swiper slider-container">
+          <!-- <div class="shadow-box"></div> -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="shadow-box">
+                <p class="slider-title hidden">OLD.K</p>
+                <p class="slider-info hidden">
+                  The Best Fried Chicken Burgers.
+                </p>
+                <a
+                  href="./pages/menu.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn hidden"
+                  >Menu</a
+                >
+                <a
+                  href="https://order.mrsdigi.com/441510191501000/85b92d28-35d5-51af-b316-63c42430a426#/store-home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn hidden"
+                  >Order now</a
+                >
+              </div>
+              <video
+                playsinline
+                autoplay
+                loop
+                muted
+                class="swiper-video"
+                src="./images/slider/video-1.mp4"
+                type="video/mp4"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="shadow-box"></div>
+              <img
+                class="swiper-img"
+                src="./images/slider/slider-1.jpeg"
+                alt="slider-2 oldk 老k炸鸡"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <div class="shadow-box"></div>
+
+              <img
+                class="swiper-img"
+                src="./images/slider/slider-5.jpeg"
+                alt="slider-3 oldk 老k炸鸡"
+              />
+            </div>
+          </div>
+
+          <div class="swiper-color swiper-pagination"></div>
+        </div>
+        <h2 class="test"></h2>
+      </section>
+      <section id="about">
+        <!-- <img class="about-img" src="./images/trans.png" alt="icon" /> -->
+        <h2 class="test hidden">About Us</h2>
+      </section>
+      <section id="top-menu">
+        <h2 class="top-menu-title hidden">Our Top Menu</h2>
+        <div class="top-burger-container">
+          <div class="top-burger">
+            <div class="hidden burger-container">
+              <img
+                src="./images/top-burger-images/nashville.svg"
+                alt="nashville"
+              />
+              <div class="combo-info">
+                <h3 class="combo-name">Box combo 1</h3>
+
+                <div class="burger-info">
+                  <p>1 Classic Nashvile Chicken Burger</p>
+                  <p>1 Karaage Tender W/Hot Fries</p>
+                </div>
+                <div class="price-info">
+                  <div class="price-container">
+                    <div class="spicy-info">
+                      Hot Level:
+                      <img
+                        class="spicy-pic"
+                        src="./images/spicy.svg"
+                        alt="spicy"
+                      />
+                      <img
+                        class="spicy-pic"
+                        src="./images/spicy.svg"
+                        alt="spicy"
+                      />
+                    </div>
+                  </div>
+                  <div class="price">$16</div>
+                  <a href="./pages/menu.html" class="view-more-button"
+                    >View More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-burger hidden">
+            <div class="burger-container">
+              <img
+                src="./images/top-burger-images/orlean.svg"
+                alt="nashville"
+              />
+              <div class="combo-info">
+                <h3 class="combo-name">Box combo 2</h3>
+
+                <div class="burger-info">
+                  <p>1 Signature Orleans Chicken Burger</p>
+                  <p>1 Karrage Tender W/Hot Fries</p>
+                </div>
+                <div class="price-info">
+                  <div class="price-container">
+                    <div class="spicy-info">
+                      Hot Level:
+                      <img
+                        class="spicy-pic"
+                        src="./images/spicy.svg"
+                        alt="spicy"
+                      />
+                    </div>
+                  </div>
+                  <div class="price">$16</div>
+                  <a href="./pages/menu.html" class="view-more-button"
+                    >View More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-burger hidden">
+            <div class="burger-container">
+              <img
+                src="./images/top-burger-images/combo-3.svg"
+                alt="nashville"
+              />
+              <div class="combo-info">
+                <h3 class="combo-name">Box combo 3</h3>
+
+                <div class="burger-info">
+                  <p>Any 2 Chicken Burgers</p>
+                  <p>W/Hot Fries</p>
+                </div>
+                <div class="price-info">
+                  <div class="price-container"><br /><br /></div>
+                  <div class="price">$20</div>
+                  <a href="./pages/menu.html" class="view-more-button"
+                    >View More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact-us">
+        <div class="two-conainer hidden">
+          <!-- <div class="one">1</div>
+          <div class="two">2</div> -->
+          <div class="location-info">
+            <div class="contact">
+              <form>
+                <h3>CONTACT US</h3>
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  id="email_id"
+                  placeholder="Email Address"
+                  required
+                />
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="Phone Number"
+                  required
+                />
+                <textarea
+                  required
+                  id="message"
+                  placeholder="How can we help you?"
+                  rows="4"
+                  cols="4"
+                ></textarea>
+                <button onclick="sendMail()">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="map"></div>
+        </div>
+
+        <div class="location-info2">
+          <div class="location-address hidden">
+            <img
+              class="logo-img-dic"
+              src="./images/location.svg"
+              alt="location-logo"
+            />
+            <p>LOCATION:</p>
+            <a
+              target="_blank"
+              href="https://www.google.com/maps/place/142+Willowdale+Ave,+North+York,+ON+M2N+4Y4/@43.7658755,-79.4007107,17z/data=!3m1!4b1!4m6!3m5!1s0x882b2d42e7f177c3:0x2a5de77c5fc215ba!8m2!3d43.7658755!4d-79.4007107!16s%2Fg%2F11b8v51315"
+              ><p class="p-info">142 Willowdale Ave North York,ON M2N 4Y4</p></a
+            >
+          </div>
+          <div class="location-address hidden">
+            <img
+              class="logo-img-dic"
+              src="./images/burger (2).svg"
+              alt="location-logo"
+            />
+            <p>ORDER FROM:</p>
+            <div class="logo-container-order">
+              <img class="logo-img" src="./images//uber.png" alt="uber" />
+              <img
+                class="logo-img"
+                src="./images//fantuan.webp"
+                alt="fantuan"
+              />
+              <img class="logo-img" src="./images//fhway.webp" alt="fhway" />
+              <img class="logo-img" src="./images//panda.webp" alt="panda" />
+            </div>
+          </div>
+          <div class="location-address hidden">
+            <img
+              class="logo-img-dic"
+              src="./images/phone.svg"
+              alt="location-logo"
+            />
+            <p>PHONE NUMBER:</p>
+            <a href="tel:4162292777"><p>(416) 229-2777</p></a>
+          </div>
+          <div class="location-address hidden">
+            <img
+              class="logo-img-dic"
+              src="./images/mail.svg"
+              alt="location-logo"
+            />
+            <p>EMAIL:</p>
+            <a href="mailto:support@oldk.ca"><p>support@oldk.ca</p></a>
+          </div>
+          <div></div>
+        </div>
+      </section>
+      <footer class="footer-container">
+        <div class="footer-text">
+          © 2022 Old K Chicken Burger Canada. All rights reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script src="./swiper-bundle.min.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACUS-hS1jiATF9i7ErOzzsJvHHbA0y9bU&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
